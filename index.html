@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,25 +26,61 @@
             </nav>
         </div>
     </header>
-    <h1>Github</h1>
-    <p>O GitHub é uma plataforma de hospedagem de código-fonte e controle de versão usando o sistema Git. Ele permite que os desenvolvedores colaborem em projetos, compartilhem código e gerenciem versões de software. O GitHub oferece recursos como repositórios, pull requests, issues e integração contínua, facilitando a colaboração e o desenvolvimento de software em equipe.</p>
-    <ul>
-        <li>Repositórios</li>
-        <li>Pull Requests</li>
-        <li>Issues</li>
-        <li>Integração Contínua</li>
-    </ul>
-    <table>
-        <tr>
-            <th>Repositório</th>
-            <th>Pull Request</th>
-            <th>Issue</th>
-        </tr>
-        <tr>
-            <td>Exemplo 1</td>
-            <td>Exemplo 2</td>
-            <td>Exemplo 3</td>
-        </tr>
-    </table>
+    <main class="page-content">
+        <section class="hero-section">
+            <p class="eyebrow">Plataforma de desenvolvimento</p>
+            <h1>GitHub</h1>
+            <p class="hero-text">O GitHub é uma plataforma de hospedagem de código-fonte e controle de versão usando o sistema Git. Ele facilita a colaboração entre desenvolvedores por meio de histórico, revisão e automação de processos.</p>
+        </section>
+
+        <section class="feature-grid" aria-label="Principais recursos do GitHub">
+            <article class="feature-card" id="repositorios">
+                <h2>Repositórios</h2>
+                <p>Organizam código, documentação e histórico de alterações em um único espaço seguro e rastreável.</p>
+            </article>
+
+            <article class="feature-card" id="pull-requests">
+                <h2>Pull Requests</h2>
+                <p>Permitem revisar alterações antes da integração, com comentários, aprovações e validações automatizadas.</p>
+            </article>
+
+            <article class="feature-card" id="issues">
+                <h2>Issues</h2>
+                <p>Facilitam o planejamento do trabalho com tarefas, bugs e melhorias priorizadas em equipes distribuídas.</p>
+            </article>
+
+            <article class="feature-card" id="integracao-continua">
+                <h2>Integração Contínua</h2>
+                <p>Executa testes e verificações sempre que o código é atualizado, reduzindo falhas no ciclo de entrega.</p>
+            </article>
+        </section>
+
+        <section class="table-section" aria-labelledby="table-title">
+            <h2 id="table-title">Exemplo de fluxo de colaboração</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Repositório</th>
+                            <th>Pull Request</th>
+                            <th>Issue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>portal-web</td>
+                            <td>#128 - Ajuste de layout</td>
+                            <td>#56 - Header responsivo</td>
+                        </tr>
+                        <tr>
+                            <td>api-financeira</td>
+                            <td>#342 - Refatoração de endpoint</td>
+                            <td>#91 - Validação de payload</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
