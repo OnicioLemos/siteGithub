@@ -4,19 +4,122 @@
     box-sizing: border-box;
 }
 
+:root{
+    --header-bg-1: #0f172a;
+    --header-bg-2: #1e3a8a;
+    --header-accent: #f59e0b;
+    --header-text: #f8fafc;
+    --header-muted: #cbd5e1;
+}
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     background-color: #f0f0f0;
     color: #333;
 }
 
-header{
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    text-align: center;
+.site-header{
+    background:
+        radial-gradient(circle at 15% 20%, rgba(245, 158, 11, 0.28), transparent 42%),
+        linear-gradient(135deg, var(--header-bg-1) 0%, var(--header-bg-2) 100%);
+    color: var(--header-text);
+    padding: 18px 22px;
+    border-bottom: 4px solid rgba(245, 158, 11, 0.65);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.3);
 }
-nav{
-    background-color: #333;
-    overflow: hidden;
+
+.header-shell{
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand{
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-mark{
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(140deg, #f59e0b, #fb923c);
+    color: #111827;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.32);
+}
+
+.brand-text{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-text strong{
+    font-size: 1.05rem;
+}
+
+.brand-text small{
+    font-size: 0.77rem;
+    letter-spacing: 0.4px;
+    color: var(--header-muted);
+}
+
+.site-header nav{
+    flex: 1;
+}
+
+.menu-list{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.menu-list a{
+    display: block;
+    text-decoration: none;
+    color: var(--header-text);
+    font-weight: 600;
+    padding: 9px 12px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.menu-list a:hover,
+.menu-list a:focus-visible{
+    background-color: rgba(248, 250, 252, 0.12);
+    border-color: rgba(248, 250, 252, 0.3);
+    color: #ffffff;
+}
+
+@media (max-width: 760px){
+    .site-header{
+        padding: 16px;
+    }
+
+    .header-shell{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .brand{
+        justify-content: center;
+    }
+
+    .menu-list{
+        justify-content: center;
+    }
 }
